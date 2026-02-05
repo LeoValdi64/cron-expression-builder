@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #111111;
+  --card-border: #1e1e1e;
+  --input-bg: #0d0d0d;
+  --input-border: #2a2a2a;
+  --accent-blue: #3b82f6;
+  --accent-green: #22c55e;
+  --accent-yellow: #eab308;
+  --accent-purple: #a855f7;
+  --accent-orange: #f97316;
+  --accent-pink: #ec4899;
+  --muted: #71717a;
+  --cron-minute: #3b82f6;
+  --cron-hour: #22c55e;
+  --cron-day: #eab308;
+  --cron-month: #a855f7;
+  --cron-weekday: #f97316;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-green: var(--accent-green);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-pink: var(--accent-pink);
+  --color-muted: var(--muted);
+  --color-cron-minute: var(--cron-minute);
+  --color-cron-hour: var(--cron-hour);
+  --color-cron-day: var(--cron-day);
+  --color-cron-month: var(--cron-month);
+  --color-cron-weekday: var(--cron-weekday);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Calendar day highlight animation */
+@keyframes pulse-highlight {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.calendar-highlight {
+  animation: pulse-highlight 2s ease-in-out infinite;
 }
