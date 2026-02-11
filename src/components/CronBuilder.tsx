@@ -118,7 +118,7 @@ export default function CronBuilder() {
           </div>
 
           {/* Timezone */}
-          <div className="mt-4 flex items-center justify-between border-t border-card-border pt-4">
+          <div className="mt-4 flex flex-col gap-4 border-t border-card-border pt-4 sm:flex-row sm:items-center sm:justify-between">
             <TimezoneSelector value={timezone} onChange={setTimezone} />
             <HumanReadable expression={expression} />
           </div>

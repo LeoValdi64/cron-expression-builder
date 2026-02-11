@@ -46,7 +46,7 @@ export default function CronInput({ expression, onChange }: CronInputProps) {
           onChange={(e) => handleChange(e.target.value)}
           placeholder="* * * * *"
           spellCheck={false}
-          className={`w-full rounded-lg bg-input-bg border px-4 py-3 font-mono text-2xl tracking-widest text-foreground outline-none transition-colors ${
+          className={`w-full rounded-lg bg-input-bg border px-4 py-3 font-mono text-lg sm:text-2xl tracking-widest text-foreground outline-none transition-colors ${
             isValid
               ? "border-input-border focus:border-accent-blue"
               : "border-red-500/50 focus:border-red-500"

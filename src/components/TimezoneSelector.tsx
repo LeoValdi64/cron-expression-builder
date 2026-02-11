@@ -18,7 +18,7 @@ export default function TimezoneSelector({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="rounded-lg bg-input-bg border border-input-border px-3 py-2 text-sm font-mono text-foreground outline-none transition-colors focus:border-accent-blue cursor-pointer"
+        className="rounded-lg bg-input-bg border border-input-border px-3 py-2 text-sm font-mono text-foreground outline-none transition-colors focus:border-accent-blue cursor-pointer max-w-[200px] sm:max-w-none"
       >
         {TIMEZONES.map((tz) => (
           <option key={tz.value} value={tz.value}>
